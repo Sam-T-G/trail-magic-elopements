@@ -6,8 +6,10 @@ const Navbar = () => {
 		<header className="text-gray-600">
 			<div className="container mx-auto flex flex-wrap p5 md:flex-row items-center justify-between">
 				<a className="flex font-medium items-center md:mb-0">
-					<div className="">Logo</div>
-					<h1 className="">Trail Magic Elopements</h1>
+					<div className="w-8 h-8">Logo</div>
+					<h1 className="hidden lg:block ml-3 text-2xl cursor-default">
+						Trail Magic Elopements
+					</h1>
 				</a>
 			</div>
 			<div className="flex flex-wrap items-center">
