@@ -1,15 +1,19 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const Navbar = () => {
 	return (
-		<header className="text-gray-600 body-font">
+		<header className="text-gray-600 body-font bg-stone-400 h-28">
 			<div className="container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
 				<a className="flex font-medium items-center md:mb-0">
-					<div className="w-8 h-8">Logo</div>
-					<h1 className="hidden lg:block ml-3 text-2xl cursor-default">
-						Trail Magic Elopements
-					</h1>
+					<Image
+						className="h-auto"
+						alt="logo-placeholder"
+						src="/TME-Logo.png"
+						width={300}
+						height={183}></Image>
+					<h1 className="hidden lg:block ml-3 text-2xl cursor-default"></h1>
 				</a>
 				<div className="flex flex-wrap items-center">
 					<nav className="md:ml-auto flex flex-wrap items-center justify-center">
