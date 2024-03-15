@@ -13,13 +13,19 @@ const Navbar = () => {
 			<div className="flex flex-wrap items-center">
 				<nav className="md:ml-auto flex flex-wrap items-center justify-center">
 					<Link href="/">
-						<span className="">Home</span>
+						<span className="flex mr-5 transform transition-transform hover:scale-110 cursor-pointer">
+							Home
+						</span>
 					</Link>
 					<Link href="/">
-						<span className="">About</span>
+						<span className="flex mr-5 transform transition-transform hover:scale-110 cursor-pointer">
+							About
+						</span>
 					</Link>
 					<Link href="/">
-						<span className="">Pricing</span>
+						<span className="flex mr-5 transform transition-transform hover:scale-110 cursor-pointer">
+							Pricing
+						</span>
 					</Link>
 				</nav>
 				<Link href="/projects">
