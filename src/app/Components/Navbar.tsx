@@ -3,15 +3,15 @@ import React from "react";
 
 const Navbar = () => {
 	return (
-		<header>
-			<div>
-				<a>
+		<header className="">
+			<div className="">
+				<a className="">
 					<div>Logo</div>
 					<h1>Trail Magic Elopements</h1>
 				</a>
 			</div>
-			<div>
-				<nav>
+			<div className="">
+				<nav className="">
 					<Link href="/">
 						<span className="">Home</span>
 					</Link>
