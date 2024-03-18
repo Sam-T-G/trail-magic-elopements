@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const Navbar = () => {
 	return (
-		<header className="text-gray-600 body-font bg-stone-400 h-28">
-			<div className="container mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
+		<header className="text-slate-100 body-font bg-stone-400 h-auto">
+			<div className="container mx-auto flex flex-col p-0 md:flex-row items-center justify-between">
 				<a className="flex font-medium items-center md:mb-0">
 					<Image
-						className="h-auto"
+						className="h-auto ml-5"
 						alt="logo-placeholder"
 						src="/TME-Logo.png"
-						width={300}
-						height={183}></Image>
+						width={200}
+						height={100}></Image>
 					<h1 className="hidden lg:block ml-3 text-2xl cursor-default"></h1>
 				</a>
-				<div className="flex flex-wrap items-center">
+				<div className="flex flex-wrap items-center p-5">
 					<nav className="md:ml-auto flex flex-wrap items-center justify-center">
 						<Link href="/">
 							<span className="flex mr-5 transform transition-transform hover:scale-110 cursor-pointer">
