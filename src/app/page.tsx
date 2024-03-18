@@ -8,8 +8,13 @@ const App = () => {
 				className="w-full h-screen bg-cover bg-center relative"
 				style={{ backgroundImage: "url('/tme-hero.jpg')" }}>
 				<div className="absolute inset-0 flex flex-col justify-center items-center">
-					<h1 className="text-4xl text-white font-bold">Hero Title</h1>
-					<p className="text-xl text-white">Hero Subtitle</p>
+					<h1 className="text-4xl text-white font-bold">
+						Elopement Photographer & Planner
+					</h1>
+					<p className="text-xl text-white mt-2">
+						Crafting wedding experiences rooted in adventure, meaning, &
+						community
+					</p>
 				</div>
 			</div>
 		</div>
