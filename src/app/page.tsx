@@ -1,12 +1,15 @@
 import React from "react";
-import Image from "next/image";
 
 const App = () => {
 	return (
-		<div className="container flex flex-wrap">
+		<div className="container flex flex-wrap w-screen h-screen">
 			<div
-				className="w-full h-screen bg-cover bg-center relative"
-				style={{ backgroundImage: "url('/tme-hero.jpg')" }}>
+				className="w-full h-full bg-cover bg-center flex justify-center relative"
+				style={{
+					backgroundImage: "url('/tme-hero.jpg')",
+					minWidth: "100dvw",
+					minHeight: "100dvh",
+				}}>
 				<div className="absolute inset-0 flex flex-col justify-center items-center">
 					<h1 className="text-4xl text-white font-bold">
 						Elopement Photographer & Planner
