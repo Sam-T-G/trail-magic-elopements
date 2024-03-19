@@ -23,9 +23,25 @@ const App = () => {
 						</div>
 					</div>
 				</div>
-				<div className="container min-w-full flex flex-col p-0 m-0 justify-center items-center">
+				<div className="container min-w-full flex flex-col p-0 my-5 justify-center items-center">
 					<div className="font-semibold text-4xl p-1 m-5 flex justify-center">
 						Trail Magic
+					</div>
+					<div className="">
+						<h1 className="font-semibold">
+							WHAT IS TRAIL MAGIC?
+							<p className="font-normal">
+								Although commonly understood as being a kind act of service that
+								a stranger or community member leaves on trail for thru hikers,
+								Trail magic is defined by the Appalachian Trail Conservancy as
+								something even more magical, “Finding what you need most when
+								you least expect it; experiencing something rare, extraordinary,
+								or inspiring in nature.”
+							</p>
+						</h1>
+					</div>
+					<div className="container min-w-full flex flex-col p-0 my-5 justify-center items-center">
+						<div>placeholder photo feature</div>
 					</div>
 				</div>
 			</main>
