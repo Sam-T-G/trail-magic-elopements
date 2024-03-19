@@ -23,7 +23,7 @@ const App = () => {
 						</div>
 					</div>
 				</div>
-				<div className="container min-w-full flex flex-col p-0 m-0 justify-center items-center">
+				<div className="container min-w-full flex flex-col p-0 my-5 justify-center items-center">
 					<div className="font-semibold text-4xl p-1 m-5 flex justify-center">
 						Trail Magic
 					</div>
@@ -40,7 +40,9 @@ const App = () => {
 							</p>
 						</h1>
 					</div>
-					<div className=""></div>
+					<div className="container min-w-full flex flex-col p-0 my-5 justify-center items-center">
+						<div>placeholder photo feature</div>
+					</div>
 				</div>
 			</main>
 		</>
