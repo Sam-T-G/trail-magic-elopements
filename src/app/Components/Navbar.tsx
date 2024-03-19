@@ -8,7 +8,7 @@ const Navbar = () => {
 			<div className="container mx-auto flex flex-col p-0 md:flex-row items-center justify-between">
 				<a className="flex font-medium items-center md:mb-0">
 					<Image
-						className="h-auto ml-5"
+						className="h-auto w-auto ml-5"
 						alt="logo-placeholder"
 						src="/TME-Logo.png"
 						width={200}
