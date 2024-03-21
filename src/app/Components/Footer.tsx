@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<footer className="text-gray-600">
+		<footer className="text-slate-100 body-font bg-stone-400 h-auto">
 			<div className="container px-5 py-8 mx-auto flex flex-col justify-between items-center sm:flex-row">
 				<a className="flex title-font font-medium items-center md:justify-start justify-center">
 					Footer Content
@@ -27,7 +27,7 @@ const Footer = () => {
 						</Link>
 					</nav>
 					<Link href="/projects">
-						<button className="inline-flex items-center border-indigo-600 border-2 bg-white text-indigo-600 font-semibold py-1 px-3 focus:outline-none hover:bg-indigo-600 transform transition-transform hover:scale-110 hover:text-white rounded-lg text-base">
+						<button className="inline-flex items-cente border-0 bg-white text-amber-800 font-semibold py-1 px-3 focus:outline-none hover:bg-amber-800 transform transition-transform hover:scale-110 hover:text-white rounded-lg text-base">
 							Contact
 						</button>
 					</Link>
