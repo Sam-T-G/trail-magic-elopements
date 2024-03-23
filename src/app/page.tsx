@@ -1,4 +1,5 @@
 import React from "react";
+import ZoomParallax from "./Components/ZoomParallax";
 
 const App = () => {
 	return (
@@ -41,7 +42,9 @@ const App = () => {
 						</h1>
 					</div>
 					<div className="container min-w-full flex flex-col p-0 my-5 justify-center items-center">
-						<div>placeholder photo feature</div>
+						<div>
+							<ZoomParallax />
+						</div>
 					</div>
 				</div>
 			</main>
