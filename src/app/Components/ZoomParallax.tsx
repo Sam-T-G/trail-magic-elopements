@@ -1,10 +1,8 @@
+// src/app/Components/ZoomParallax.tsx
 import React, { useRef } from "react";
 import Image from "next/image";
 import { useScroll, useTransform } from "framer-motion";
 import Picture1 from "../../../public/tme-kt-1.jpg";
-import Picture2 from "../../../public/tme-kt-2.jpg";
-import Picture3 from "../../../public/tme-kt-3.jpg";
-import Picture4 from "../../../public/tme-kt-4.jpg";
 
 const ZoomParallax = () => {
 	const container = useRef(null);
