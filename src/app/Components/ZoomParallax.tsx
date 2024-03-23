@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef } from "react";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -13,24 +14,52 @@ const ZoomParallax = () => {
 		offset: ["start start", "end end"],
 	});
 
-	const scale4 = useTransform(scrollYProgress, [0, 1], [0, 4]);
+	const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
+	const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
+	const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
+	const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
+
+	const pictures = [
+		{
+			src: Picture1,
+			scale: scale4,
+		},
+		{
+			src: Picture2,
+			scale: scale4,
+		},
+		{
+			src: Picture3,
+			scale: scale4,
+		},
+		{
+			src: Picture4,
+			scale: scale4,
+		},
+	];
 
 	return (
 		<div ref={container} className="h-[300vh] relative w-screen">
-			<div className="sticky top-0 my-[50vh] h-screen bg-orange-500 w-screen">
-				<div className="w-full h-full absolute top-0 flex items-center justify-center">
-					<motion.div
-						style={{ scale: scale4 }}
-						className="w-[25vw] h-[25vh] relative">
-						<Image
-							className="cover"
-							src={Picture1}
-							alt="image"
-							fill
-							placeholder="blur"
-						/>
-					</motion.div>
-				</div>
+			<div className="sticky top-0 my-[50vh] h-screen bg-orange-500 w-screen overflow-hidden">
+				{pictures.map(({ src, scale }, index) => {
+					return (
+						<div
+							key={index}
+							className="w-full h-full absolute top-0 flex items-center justify-center">
+							<motion.div
+								style={{ scale: scale4 }}
+								className="w-[25vw] h-[25vh] relative">
+								<Image
+									className="cover"
+									src={Picture1}
+									alt="image"
+									fill
+									placeholder="blur"
+								/>
+							</motion.div>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);
