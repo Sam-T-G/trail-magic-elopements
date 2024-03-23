@@ -8,8 +8,18 @@ import Picture4 from "../../../public/tme-kt-4.jpg";
 const ZoomParallax = () => {
 	return (
 		<div className="h-[300vh] relative w-screen">
-			<div className="sticky top-0 h-screen bg-orange-500 w-screen">
-				content
+			<div className="sticky top-0 my-[50vh] h-screen bg-orange-500 w-screen">
+				<div className="w-full h-full absolute top-0 flex items-center justify-center">
+					<div className="w-[25vw] h-[25vh] relative">
+						<Image
+							className="cover"
+							src={Picture1}
+							alt="image"
+							fill
+							placeholder="blur"
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
