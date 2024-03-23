@@ -6,7 +6,11 @@ import Picture3 from "../../../public/tme-kt-3.jpg";
 import Picture4 from "../../../public/tme-kt-4.jpg";
 
 const ZoomParallax = () => {
-	return <main></main>;
+	return (
+		<div>
+			<div></div>
+		</div>
+	);
 };
 
 export default ZoomParallax;
