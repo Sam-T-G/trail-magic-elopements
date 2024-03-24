@@ -53,7 +53,6 @@ const ZoomParallax = () => {
 									className="cover"
 									src={Picture1}
 									alt="image"
-									fill
 									placeholder="blur"
 								/>
 							</motion.div>
