@@ -47,12 +47,13 @@ const ZoomParallax = () => {
 							key={index}
 							className="w-full h-full absolute top-0 flex items-center justify-center">
 							<motion.div
-								style={{ scale: scale4 }}
+								style={{ scale }}
 								className="w-[25vw] h-[25vh] relative">
 								<Image
 									className="cover"
-									src={Picture1}
+									src={src}
 									alt="image"
+									fill
 									placeholder="blur"
 								/>
 							</motion.div>
