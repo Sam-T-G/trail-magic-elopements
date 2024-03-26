@@ -27,6 +27,12 @@ const ZoomParallax = () => {
 		{
 			src: Picture2,
 			scale: scale4,
+			// customStyle: {
+			// 	marginTop: "-30vh",
+			// 	marginLeft: "5vw",
+			// 	width: "35vw",
+			// 	height: "30vh",
+			// },
 		},
 		{
 			src: Picture3,
