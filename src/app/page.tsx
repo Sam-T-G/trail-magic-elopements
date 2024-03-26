@@ -42,9 +42,10 @@ const App = () => {
 						</h1>
 					</div>
 					<div className="container min-w-full flex flex-col p-0 my-5 justify-center items-center">
-						<div>
+						{/* zoom parallax shelved for time being */}
+						{/* <div>
 							<ZoomParallax />
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</main>

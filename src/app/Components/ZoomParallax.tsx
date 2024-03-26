@@ -1,4 +1,7 @@
 "use client";
+
+//Idea Shelved
+
 import React, { useRef } from "react";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -27,6 +30,12 @@ const ZoomParallax = () => {
 		{
 			src: Picture2,
 			scale: scale4,
+			// customStyle: {
+			// 	marginTop: "-30vh",
+			// 	marginLeft: "5vw",
+			// 	width: "35vw",
+			// 	height: "30vh",
+			// },
 		},
 		{
 			src: Picture3,
@@ -40,23 +49,25 @@ const ZoomParallax = () => {
 
 	return (
 		<div ref={container} className="h-[300vh] relative w-screen">
-			<div className="sticky top-0 my-[50vh] h-screen bg-orange-500 w-screen overflow-hidden">
+			<div className="sticky top-0 my-[50vh] h-screen bg-stone-800 w-screen overflow-hidden">
 				{pictures.map(({ src, scale }, index) => {
+					// const className = index === 1 ? "mt-[30vh]" : ""; // Add 30vh top margin to the second image
+
 					return (
-						<div
+						<motion.div
+							style={{ scale }}
 							key={index}
 							className="w-full h-full absolute top-0 flex items-center justify-center">
-							<motion.div
-								style={{ scale: scale4 }}
-								className="w-[25vw] h-[25vh] relative">
+							<div className="w-[25vw] h-[25vh] relative">
 								<Image
 									className="cover"
-									src={Picture1}
+									src={src}
 									alt="image"
+									fill
 									placeholder="blur"
 								/>
-							</motion.div>
-						</div>
+							</div>
+						</motion.div>
 					);
 				})}
 			</div>
