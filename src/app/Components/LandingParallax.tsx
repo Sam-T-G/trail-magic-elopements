@@ -32,34 +32,18 @@ const LandingParallax = () => {
 	];
 
 	return (
-		<div ref={container} className={styles.container}>
-			<div className={styles.body}>
+		<div className="container mt-[10vh] min-h-[100vh] w-full h-full">
+			<div className="left-[10vw] w-full h-full">
 				<motion.h1 style={{ y: sm }}>Parallax</motion.h1>
 				<h1>Scroll</h1>
-				<div className={styles.word}>
-					<p>
-						{word.split("").map((letter, i) => {
-							const y = useTransform(
-								scrollYProgress,
-								[0, 1],
-								[0, Math.floor(Math.random() * -75) - 25]
-							);
-							return (
-								<motion.span style={{ top: y }} key={`l_${i}`}>
-									{letter}
-								</motion.span>
-							);
-						})}
-					</p>
-				</div>
 			</div>
-			<div className={styles.images}>
+			<div className="container flex w-full justify-center relative mt-[5vh]">
 				{images.map(({ src, y }, i) => {
 					return (
 						<motion.div
 							style={{ y }}
 							key={`i_${i}`}
-							className={styles.imageContainer}>
+							className="absolute w-auto h-auto">
 							<Image src={src} placeholder="blur" alt="image" fill />
 						</motion.div>
 					);
