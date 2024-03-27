@@ -32,11 +32,11 @@ const LandingParallax = () => {
 	];
 
 	return (
-		<div ref={container} className={styles.container}>
-			<div className={styles.body}>
+		<div ref={container} className="mt-[10vh] min-h-[100vh]">
+			<div className="left-[10vw]">
 				<motion.h1 style={{ y: sm }}>Parallax</motion.h1>
 				<h1>Scroll</h1>
-				<div className={styles.word}>
+				<div className=""{styles.word}>
 					<p>
 						{word.split("").map((letter, i) => {
 							const y = useTransform(
@@ -53,13 +53,13 @@ const LandingParallax = () => {
 					</p>
 				</div>
 			</div>
-			<div className={styles.images}>
+			<div className="flex w-full justify-center relative mt-[5vh]">
 				{images.map(({ src, y }, i) => {
 					return (
 						<motion.div
 							style={{ y }}
 							key={`i_${i}`}
-							className={styles.imageContainer}>
+							className=""{styles.imageContainer}>
 							<Image src={src} placeholder="blur" alt="image" fill />
 						</motion.div>
 					);
