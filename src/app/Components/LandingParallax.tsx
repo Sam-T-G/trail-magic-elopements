@@ -40,10 +40,7 @@ const LandingParallax = () => {
 			<div className="flex w-full justify-center relative mt-[5vh]">
 				{images.map(({ src, y }, i) => {
 					return (
-						<motion.div
-							style={{ y }}
-							key={`i_${i}`}
-							className=""{styles.imageContainer}>
+						<motion.div style={{ y }} key={`i_${i}`} className="absolute">
 							<Image src={src} placeholder="blur" alt="image" fill />
 						</motion.div>
 					);
