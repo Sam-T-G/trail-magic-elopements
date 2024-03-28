@@ -32,10 +32,12 @@ const LandingParallax = () => {
 	];
 
 	return (
-		<div className="container mt-[10vh] min-h-[100vh] w-full h-full">
-			<div className="left-[10vw] w-full h-full">
-				<motion.h1 style={{ y: sm }}>Parallax</motion.h1>
-				<h1>Scroll</h1>
+		<div className="container flex mt-[10vh] min-h-[100vh] w-full h-full">
+			<div className="left-[10vw] w-[800px] h-[800px] flex">
+				<motion.h1 style={{ y: sm }} className="flex w-auto h-auto">
+					Parallax
+				</motion.h1>
+				<h1 className="">Scroll</h1>
 			</div>
 			<div className="container flex w-full justify-center relative mt-[5vh]">
 				{images.map(({ src, y }, i) => {
@@ -43,8 +45,15 @@ const LandingParallax = () => {
 						<motion.div
 							style={{ y }}
 							key={`i_${i}`}
-							className="absolute w-auto h-auto">
-							<Image src={src} placeholder="blur" alt="image" fill />
+							className="absolute w-[400px] h-[400px]">
+							<Image
+								src={src}
+								placeholder="blur"
+								alt="image"
+								fill
+								width={800}
+								height={800}
+							/>
 						</motion.div>
 					);
 				})}
