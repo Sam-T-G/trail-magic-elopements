@@ -35,19 +35,24 @@ const LandingParallax = () => {
 	];
 
 	return (
-		<div className="container flex flex-wrap mt-[10vh] min-h-[100vh] w-full h-[2800] justify-center">
+		<div className="container flex flex-wrap mt-[10vh] min-h-[100vh] min-w-full h-[2800] justify-center">
 			<div className=" justify-center flex w-full">
 				<motion.h1 style={{ y: sm }} className="flex w-auto h-auto">
 					Parallax
 				</motion.h1>
 				<h1 className="flex w-auto h-auto">Scroll</h1>
 			</div>
-			<div className=" flex w-full justify-center mt-[5vh]" ref={container}>
+			<div className="flex w-full justify-center mt-[5vh]" ref={container}>
 				{/* Ensure that the ref is applied to the relevant element */}
 				{images.map(({ src, y }, i) => {
 					return (
-						<motion.div style={{ y }} key={`i_${i}`}>
-							<Image src={src} placeholder="blur" alt="image" />
+						<motion.div className="absolute" style={{ y }} key={`i_${i}`}>
+							<Image
+								src={src}
+								className="cover"
+								placeholder="blur"
+								alt="image"
+							/>
 						</motion.div>
 					);
 				})}
