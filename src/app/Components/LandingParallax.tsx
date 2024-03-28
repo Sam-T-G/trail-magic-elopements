@@ -8,10 +8,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const LandingParallax = () => {
 	const container = useRef(null);
+
+	// Call useScroll() hook within the component where the ref is defined
 	const { scrollYProgress } = useScroll({
 		target: container,
 		offset: ["start end", "end start"],
 	});
+
 	const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
 	const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
 	const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
@@ -32,27 +35,23 @@ const LandingParallax = () => {
 	];
 
 	return (
-		<div className="container flex mt-[10vh] min-h-[100vh] w-full h-full">
-			<div className="left-[10vw] w-[800px] h-[800px] flex">
+		<div className="container flex flex-wrap mt-[10vh] min-h-[100vh] min-w-full h-[2800] justify-center">
+			<div className=" justify-center flex w-full">
 				<motion.h1 style={{ y: sm }} className="flex w-auto h-auto">
 					Parallax
 				</motion.h1>
-				<h1 className="">Scroll</h1>
+				<h1 className="flex w-auto h-auto">Scroll</h1>
 			</div>
-			<div className="container flex w-full justify-center relative mt-[5vh]">
+			<div className="flex w-full justify-center mt-[5vh]" ref={container}>
+				{/* Ensure that the ref is applied to the relevant element */}
 				{images.map(({ src, y }, i) => {
 					return (
-						<motion.div
-							style={{ y }}
-							key={`i_${i}`}
-							className="absolute w-[400px] h-[400px]">
+						<motion.div className="absolute" style={{ y }} key={`i_${i}`}>
 							<Image
 								src={src}
+								className="cover"
 								placeholder="blur"
 								alt="image"
-								fill
-								width={800}
-								height={800}
 							/>
 						</motion.div>
 					);
